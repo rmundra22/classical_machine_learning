@@ -1,4 +1,4 @@
-# Blueprint/Boilerplate For Python Projects
+# Classical Machine Learning
 
 [![Build, Test and Lint Action](https://github.com/MartinHeinz/python-project-blueprint/workflows/Build,%20Test,%20Lint/badge.svg)](https://github.com/MartinHeinz/python-project-blueprint/workflows/Build,%20Test,%20Lint/badge.svg)
 [![Push Action](https://github.com/MartinHeinz/python-project-blueprint/workflows/Push/badge.svg)](https://github.com/https://github.com/MartinHeinz/python-project-blueprint/workflows/Push/badge.svg)
@@ -6,17 +6,33 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/05c44c881bc10a706cbc/maintainability)](https://codeclimate.com/github/MartinHeinz/python-project-blueprint/maintainability)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MartinHeinz_python-project-blueprint&metric=alert_status)](https://sonarcloud.io/dashboard?id=MartinHeinz_python-project-blueprint)
 
-## Blog Posts - More Information About This Repo
+# Topics Included in this repo
 
-You can find more information about this project/repository and how to use it in following blog post:
+## Supervised Algorithms
+1. Regression Models
+   * Linear Regression
+   * Decision Trees
+2. Classification Model
+   * Logistic Regression
+   * Support Vector Machine (SVM)
+   * Naive Bayes
+   * Decision Trees
+3. Neural Networks
+   * Fully Connected Neural Network
 
-- [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
-- [Automating Every Aspect of Your Python Project](https://towardsdatascience.com/automating-every-aspect-of-your-python-project-6517336af9da)
-- [Deploy Any Python Project to Kubernetes](https://towardsdatascience.com/deploy-any-python-project-to-kubernetes-2c6ad4d41f14)
-- [Implementing gRPC server using Python](https://towardsdatascience.com/implementing-grpc-server-using-python-9dc42e8daea0)
+## Unsupervised Algorithms
+1. Clustering Algorithms
+   * K Means
+   * K-Nearest Neighbour (KNN)
+3. Neural Networks
+   * GANS
+
+
+### NOTE
+To understand the content of this repo the author assumes that you have a basic knowledge of python, university level mathematics and git.
 
 ## Quick Start
-To use this repository as starter for your project you can run `configure_project.sh` script, which sets up all variables and file names. This way you can avoid configuring and renaming things yourself:
+To use this repository as a starter for your project you can run the `configure_project.sh` script, which sets up all variables and file names. This way you can avoid configuring and renaming things yourself:
 
 ```shell
 ./configure_project.sh MODULE="coolproject" REGISTRY="docker.pkg.github.com/martinheinz/repo-name"
