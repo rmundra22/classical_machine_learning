@@ -60,7 +60,7 @@ class SVM:
         else:
             raise ValueError(f'Kernel not supported, please use one of the following: {self._supported_kernel}')
 
-    def _lagrangian_dual(self, alpha:np.ndarray)->np.float:
+    def _lagrangian_dual(self, alpha:np.ndarray)->float:
         '''
         The fucntion defines lagrangian dual.
         The lagrangian dual for SVM is defined as:
@@ -174,7 +174,7 @@ class SVM:
         self.w = np.dot(self.X[sv,:].T, self.alpha[sv]*self.y[sv])
         return self.w.T
     
-    def _get_b(self)-> np.float:
+    def _get_b(self)->float:
         '''
         This function calculates the bias term.
         returns:
@@ -242,7 +242,7 @@ class SVM:
         return self.w
     
     @property
-    def bias_(self)->np.float:
+    def bias_(self)->float:
         '''
         This function returns the bias.
         returns:

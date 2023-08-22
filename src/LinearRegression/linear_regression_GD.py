@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_diabetes, load_boston, fetch_california_housing
+from sklearn.datasets import fetch_california_housing #, load_diabetes, load_boston
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
@@ -166,7 +166,7 @@ if __name__ == "__main__":
 
     # Test the model
     y_pred = linear_reg.predict(X_test)
-    print(f'Mean Squared Error: {mean_squared_error(y_test, y_pred)}')
+    print(f'Root Mean Squared Error: {mean_squared_error(y_test, y_pred, squared = False)}')
     print(f'Mean Absolute Error: {mean_absolute_error(y_test, y_pred)}')
     # print(f'Mean Squared Log Error: {mean_squared_log_error(y_test, y_pred)}')
 
