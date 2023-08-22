@@ -164,6 +164,7 @@ if __name__ == "__main__":
 
     # Train the model
     log_reg = LogisticRegression(lr=0.1, iteration=4000, alpha=0.1)
+        
     W, b = log_reg.fit(X_train, y_train[:, np.newaxis])
     print(f'Weights: \n{W}')
     print(f'Bias: {b}\n')
@@ -173,6 +174,12 @@ if __name__ == "__main__":
     print(f'Accuracy: {(accuracy_score(y_test, y_pred)*100).round(2)}%')
     print(f'Classification Report: \n{classification_report(y_test, y_pred)}')
     print(f'Confusion Matrix: \n{confusion_matrix(y_test, y_pred)}')
+    
+    print("Learned Weights (slope coefficients) of the trained Model")
+    print(linear_reg.weights)
+    
+    print("Learned Bias (intercept) of the trained Model")
+    print(linear_reg.bias)
 
     # Plot Confusion matrix
     plt.figure(figsize=(10,10))

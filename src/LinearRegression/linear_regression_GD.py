@@ -156,7 +156,7 @@ if __name__ == "__main__":
     # Scale the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.fit_transform(X_test)
+    X_test = scaler.transform(X_test)
 
     # Create a Linear Regression Model
     linear_reg = LinearRegression_GD(lr=0.01, iteration=2000, alpha=3.0)
@@ -173,3 +173,9 @@ if __name__ == "__main__":
     # Print the predicted values and actual values side by side
     for y_pred, y_actual in zip(y_pred[:10], y_test[:10]):
         print(f'Predicted Value: {y_pred}, Actual Value: {y_actual}')
+    
+    print("Learned Weights (slope coefficients) of the trained Model")
+    print(linear_reg.weights)
+    
+    print("Learned Bias (intercept) of the trained Model")
+    print(linear_reg.bias)
