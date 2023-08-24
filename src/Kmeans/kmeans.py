@@ -69,6 +69,7 @@ class KMeansClustering(object):
         y_label = np.zeros(shape=(self.num_datapoints))
         for idx, cluster in enumerate(clusters):
             for point_idx in cluster:
+                print(point_idx)
                 y_label[point_idx] = idx
         return y_label
 
@@ -77,6 +78,9 @@ class KMeansClustering(object):
 
     def fit(self, X:np.ndarray):
         centroids = self.init_centroids(X)
+        for i in range(len(centroids)):
+            print("Initialized Centroids #{}: {}".format(i, centroids[i]))
+            
         for i in range(self.max_iter):
             clusters = self.create_clusters(X, centroids)
             prev_centroids = centroids
@@ -102,11 +106,14 @@ class KMeansClustering(object):
 if __name__ == "__main__":
     np.random.seed(45)
     K = 3
-    num_of_features = 3
+    num_of_features = 3 # problem in in 3D space (x, y, z)
     num_of_samples = 1000
     X, _ = make_blobs(n_samples=num_of_samples, centers=K, n_features=num_of_features, cluster_std=2.0, random_state=1)
     # X, _ = make_classification(n_samples=num_of_samples, n_features=num_of_features, n_redundant=0, n_informative=2, n_classes=K, n_clusters_per_class=1)
     # X, _ = make_moons(n_samples=num_of_samples, noise=0.1)
+    
+    print(X.shape)
+    print(X[0])
 
     kmeans = KMeansClustering(K, max_iter=30)
     y_label = kmeans.fit(X)

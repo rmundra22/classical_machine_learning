@@ -160,7 +160,7 @@ if __name__ == "__main__":
     # Scale the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.fit_transform(X_test)
+    X_test = scaler.transform(X_test)
 
     # Train the model
     log_reg = LogisticRegression(lr=0.1, iteration=4000, alpha=0.1)
@@ -175,11 +175,11 @@ if __name__ == "__main__":
     print(f'Classification Report: \n{classification_report(y_test, y_pred)}')
     print(f'Confusion Matrix: \n{confusion_matrix(y_test, y_pred)}')
     
-    print("Learned Weights (slope coefficients) of the trained Model")
-    print(linear_reg.weights)
+    # print("Learned Weights (slope coefficients) of the trained Model")
+    # print(log_reg.weights)
     
-    print("Learned Bias (intercept) of the trained Model")
-    print(linear_reg.bias)
+    # print("Learned Bias (intercept) of the trained Model")
+    # print(log_reg.bias)
 
     # Plot Confusion matrix
     plt.figure(figsize=(10,10))
