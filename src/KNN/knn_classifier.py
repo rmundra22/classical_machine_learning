@@ -91,7 +91,7 @@ if __name__ == "__main__":
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Comment out the below block to use PCA
+    # Un-comment the below block to use PCA
     ###############################################################################
     # pca = PCA(n_components=3)
     # X_train = pca.fit_transform(X_train)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # print(f'rX-Train set shape:{X_train.shape}\nrX- Test set shape: {X_test.shape}')
     ###############################################################################
 
-    #Comment out below block to plot K vs Accuracy
+    # Un-comment below block to plot K vs Accuracy
     ##############################################################################################
     accuracies = {'k':[],'accuracy':[]}
     for k in tqdm(range(0,22, 2)):
