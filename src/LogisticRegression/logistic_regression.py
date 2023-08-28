@@ -17,7 +17,7 @@ class LogisticRegression(object):
         super().__init__()
         self.lr = lr
         self.iteration = iteration
-        self.alpha = alpha
+        self.alpha = alpha # regularization parameter
         self.W = None
         self.b = None
 
@@ -157,7 +157,8 @@ if __name__ == "__main__":
     print(f'Training data shape: {X_train.shape}')
     print(f'Testing data shape: {X_test.shape}')
 
-    # Scale the data
+    # Scale the data: 
+    # Ref: https://www.analyticsvidhya.com/blog/2021/04/difference-between-fit-transform-fit_transform-methods-in-scikit-learn-with-python-code/
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
