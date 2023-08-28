@@ -18,8 +18,10 @@
    * Naive Bayes
    * Decision Trees
 3. Neural Networks
-   * Fully Connected Neural Network
-
+   * Fully Connected Neural Network 
+   > Links 
+      * Classification Problem: https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.30450&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+      * Regression Problem: https://www.cs.cmu.edu/~pvirtue/tfp/#activation=relu&batchSize=10&dataset=circle&regDataset=reg-line&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.79674&showTestData=false&discretize=false&percTrainData=50&x=true&collectStats=false&problem=regression&initZero=false&hideText=false
 ## Unsupervised Algorithms
 1. Clustering Algorithms
    * K Means
