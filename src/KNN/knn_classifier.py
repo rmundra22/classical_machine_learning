@@ -96,23 +96,23 @@ if __name__ == "__main__":
 
     #Comment out below block to plot K vs Accuracy
     ##############################################################################################
-    # accuracies = {'k':[],'accuracy':[]}
-    # for k in tqdm(range(0,22, 2)):
-    #     k = 1 if k == 0 else k
-    #     knn = KNN(k)
-    #     knn.train(X_train, y_train)
-    #     accuracies['k'].append(k)
-    #     accuracies['accuracy'].append(knn.accuracy(X_test, y_test))
+    accuracies = {'k':[],'accuracy':[]}
+    for k in tqdm(range(0,22, 2)):
+        k = 1 if k == 0 else k
+        knn = KNN(k)
+        knn.train(X_train, y_train)
+        accuracies['k'].append(k)
+        accuracies['accuracy'].append(knn.accuracy(X_test, y_test))
 
-    # fig, ax = plt.subplots()
-    # ax.plot(accuracies['k'], accuracies['accuracy'], '-o')
-    # ax.set_xlabel('K')
-    # ax.set_ylabel('Accuracy')
-    # ax.set_title('K vs Accuracy')
+    fig, ax = plt.subplots()
+    ax.plot(accuracies['k'], accuracies['accuracy'], '-o')
+    ax.set_xlabel('K')
+    ax.set_ylabel('Accuracy')
+    ax.set_title('K vs Accuracy')
 
-    # for k, acc in zip(accuracies['k'], accuracies['accuracy']):
-    #     ax.annotate(f'({k},{acc:.2f})', (k, acc+0.01))
-    # plt.show()
+    for k, acc in zip(accuracies['k'], accuracies['accuracy']):
+        ax.annotate(f'({k},{acc:.2f})', (k, acc+0.01))
+    plt.show()
     ##############################################################################################
 
     #############################################################################################
