@@ -15,9 +15,9 @@ Class to implement Logistic Regression Model.
 class LogisticRegression(object):
     def __init__(self, lr:float=0.01, iteration:int = 2000, alpha:float=1.0) -> None:
         super().__init__()
-        self.lr = lr
+        self.lr = lr # learning rate (for gradient descent)
         self.iteration = iteration
-        self.alpha = alpha # regularization parameter
+        self.alpha = alpha # regularization parameter (for loss function)
         self.W = None
         self.b = None
 

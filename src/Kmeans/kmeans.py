@@ -69,7 +69,6 @@ class KMeansClustering(object):
         y_label = np.zeros(shape=(self.num_datapoints))
         for idx, cluster in enumerate(clusters):
             for point_idx in cluster:
-                print(point_idx)
                 y_label[point_idx] = idx
         return y_label
 
@@ -87,6 +86,7 @@ class KMeansClustering(object):
             centroids = self.update_centroid(X, clusters)
             print(f'Centroids at iter {i+1}: {centroids[0]}')
 
+            # early stopping condition
             diff = prev_centroids - centroids
             if diff.any() < 0.0001:
                 break

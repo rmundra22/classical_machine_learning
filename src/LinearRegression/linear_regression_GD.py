@@ -156,7 +156,7 @@ if __name__ == "__main__":
     # Scale the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.fit_transform(X_test)
+    X_test = scaler.transform(X_test)
 
     # Create a Linear Regression Model
     linear_reg = LinearRegression_GD(lr=0.01, iteration=2000, alpha=3.0)
